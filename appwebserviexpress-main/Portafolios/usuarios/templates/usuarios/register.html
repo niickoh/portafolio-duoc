@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>
+    Registro de Usuario
+</title>
+{% endblock head %}
+{% load static %}
+{% block content %}
+{% if registration_form.non_field_errors %}
+    <div class="aler alert-danger" role="alert">
+    {% for error in registration_form.non_field_errors %}
+        {{error}}
+    {% endfor %}
+{% endif %}
+
+
+        <header class="container">
+        <br><br>
+        	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+	        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+               
+                        <div class="limiter">
+                            <div class="container-login100">
+                                <div class="wrap-login100">
+                                    <div class="login100-form-title" style="background-image: url(images/bg-01.jpg);">
+                                        <span class="login100-form-title-1">
+                                            ¡Regístrate!
+                                        </span>
+                                    </div>
+                                    <div class="container">
+                                    <br>
+                                        <form role="form" method="POST">
+                                            {% csrf_token %}
+                                            <div class="controls">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">{{registration_form.username.label}}  {{registration_form.username}} {{registration_form.username.errors}}</div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">{{registration_form.email.label}}  {{registration_form.email}} {{registration_form.email.errors}}</div>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">{{registration_form.fecha_nacimiento.label}}  {{registration_form.fecha_nacimiento}} {{registration_form.fecha_nacimiento.errors}}</div>
+                                                    </div>                                           
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">{{registration_form.first_name.label}} {{registration_form.first_name}} {{registration_form.first_name.errors}}</div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">{{registration_form.last_name.label}} {{registration_form.last_name}} {{registration_form.last_name.errors}}</div>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">{{registration_form.password1.label}} {{registration_form.password1}} {{registration_form.password1.errors}}</div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">{{registration_form.password2.label}} {{registration_form.password2}}</div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">{{registration_form.password2.errors}}</div>
+                                                    </div>
+                                                    <br><br>  
+                                                    <div class="container-login100-form-btn">
+                                                        <button class="login100-form-btn">
+                                                            Ingresar
+                                                        </button>
+                                                    </div>    
+
+                                                    <div class="p-l-160 mt-4">
+                                                        ¿Ya tienes una cuenta?, Ingresa
+                                                        <a href="{% url 'usuarios:inicio_sesion'%}">
+                                                            ¡Aquí!
+                                                        </a>
+                                                    </div>
+                                                    
+                                                    <br>   <br><br><br>                                           
+                                                </div>
+                                            </div>
+                                        </form>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- /.8 -->
+                    </div> <!-- /.row-->
+                </div>
+            </div>
+            <br>
+            
+            
+        </header>
+        
+        <script>
+            $(function () {
+            $("#id_fecha_nacimiento").datepicker({
+                format:'dd/mm/yyyy',
+            });
+            });
+        </script>
+
+
+
+{% endblock %}

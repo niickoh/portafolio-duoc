@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head %}
+<title>
+    Boleta
+</title>
+{% endblock head %}
+
+{% block content %}
+
+<header class="masthead">        
+        	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+	        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+            <link href="{% static 'css/estilo_slide.css' %}" rel="stylesheet" />
+               
+                        <div class="limiter">
+                            <div class="container-login100">
+                                <div class="wrap-login100">
+                                    <div class="logingreen-form-title" style="background-image: url(images/bg-01.jpg);">
+                                        <span class="logingreen-form-title-1">
+                                            Boleta de la Reserva: {{boleta.id_user}} 
+                                        </span>
+                                    </div>
+                                    <div class="container mt-4"> 
+                                        <div class="row"> 
+                                            <div class="col-md-3">
+                                                <div class="form-group"><p class="text-left">Número de Boleta</p><input type="text" style="text-transform:uppercase;" class="formulario_izquierda" value="{{ boleta.id }}" readonly></div>
+                                            </div>                                                                                                                           
+                                        </div>
+                                        
+                                        <div class="row"> 
+                                            <div class="col-md-6">
+                                                <div class="form-group"><p class="text-left">Nombre Cliente</p><input type="text" style="text-transform:uppercase;" class="formulario_izquierda" value="{{ boleta.nombre_cliente }}" readonly></div>
+                                            </div>  
+                                            <div class="col-md-6">                                            
+                                                <div class="form-group"><p class="text-left">Nombre del Servicio</p><input type="text" style="text-transform:uppercase;" class="formulario_izquierda" value="{{ boleta.nombre_servicio }}" readonly></div>
+                                            
+                                            </div>                                            
+                                            <div class="col-md-6">
+                                                <div class="form-group"><p class="text-left">Fecha y Hora de la Reserva</p><input type="text" style="text-transform:uppercase;" class="formulario_izquierda" value="{{ boleta.fecha}}" readonly></div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group"><p class="text-left">Email</p><input type="text" style="text-transform:uppercase;" class="formulario_izquierda" value="{{ user.email}}" readonly></div>
+                                            </div> 
+                                        </div> 
+                                        <div class="row"> 
+                                            <div class="col-md-6">
+                                                <div class="form-group"><p class="text-left">Mecánico</p><input type="text" style="text-transform:uppercase;" class="formulario_izquierda" value="{{ boleta.nombre_mecanico}}" readonly></div>
+                                            </div>      
+                                            <div class="col-md-6">
+                                                <div class="form-group"><p class="text-left">Valor Total del Servicio</p><input type="text" style="text-transform:uppercase;" class="formulario_izquierda" value="{{ boleta.total}}" readonly></div>
+                                            </div>                                                                                
+                                        </div> 
+                                        <div class="row"> 
+                                            <div class="col-md-6 ">
+                                                <div class="form-group "><p class="text-left">Comentario</p><div type="text" style="text-transform:uppercase;" class="formulario_ancho text-middle" value="" readonly>{{ boleta.comentario}}<br></div>
+                                            </div>                                                                                      
+                                        </div> 
+                                                                                 
+                                                                                 
+                                            
+                                         
+                                        
+                                        <br>                                        
+                                        <div class="p-l-240 mt-4">                                            
+                                                <a class="p-l-60" href="{% url 'core:listar_reserva'%}">
+                                                    Volver
+                                                </a>
+                                        </div>
+                                        
+                                    </div>
+                                    <br>
+                            </div>                            
+                        </div> 
+                    
+                
+                
+            
+            
+        </header>
+        
+
+{% endblock %}

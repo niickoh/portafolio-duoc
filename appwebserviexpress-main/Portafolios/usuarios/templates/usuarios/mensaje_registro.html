@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>
+    Registro de Usuario
+</title>
+{% endblock head %}
+{% load static %}
+{% block content %}
+
+
+                                                    
+        <div class="masthead mt-5 pt-5">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+        <br>        <br>
+            <div class="container pt-5"> <div class=" text-center mt-5 ">
+                </div>
+                <div class="row ">
+                    <div class="col-lg-7 mx-auto">
+                        <div class="card mt-2 mx-auto p-4 bg-light">
+                            <div class="card-body bg-light">
+                                <div class="container">
+                                    <div class="alert alert-success" role="alert">
+                                        ¡Registrado Correctamente!
+                                    </div>
+                                        <div class="container-login100-form-btn p-l-160">
+                                            <button class="login100-form-btn" type="submit" onclick="location.href='{% url 'usuarios:inicio_sesion'%}'">
+                                                Aceptar
+                                            </button>
+                                        </div>
+                                </div>
+                            </div>
+                        </div> <!-- /.8 -->
+                    </div> <!-- /.row-->
+                </div>
+            </div>
+        </div>
+        
+
+
+
+{% endblock %}

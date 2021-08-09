@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <title>Afinación</title>
+{% endblock head %}
+{% block content %}
+        <header class="masthead">
+                <link href="{% static 'css/servicios.css' %}" rel="stylesheet"/>
+                <link href="{% static 'css/descripcion.css' %}" rel="stylesheet" />
+                <link href="{% static 'css/afinacion.css' %}" rel="stylesheet" />
+        <br>       <br>
+            <div class="container afinacion mt-5 pt-5">
+                <div class="row">
+                    <h2 class="text-white mb-4">Afinacion</h2>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <img class="iclass" src="{% static '/assets/img/afinacion2.jpg' %}"/>
+                    </div>
+                    <div class="col-8">
+                        <p class="text-white-80">
+                                        El servicio de afinación de un coche consiste en la sustitución de las piezas que por su uso normal se desgastan disminuyendo su rendimiento, 
+                                        y la limpieza a profundidad de algunos elementos del motor.
+                        </p>
+                    </div>
+                </div>
+            </div>   
+            <div class="container afinacion mt-5">
+                <div class="row">
+                    <h2 class="text-white mb-4">¿Qué incluye la afinacion?</h2>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <img class="iclass" src="{% static '/assets/img/afinacion.jpg' %}"/>
+                    </div>
+                    <div class="col-8">
+                        <p class="text-white-80">
+                                        La afinación consiste en cambios de bujías, filtros de aceite y gasolina, cambio de aceite y limpieza de válvulas, todo ello da una garantía para alargar la vida útil del motor, 
+                                        permite además obtener un buen rendimiento en consumo de gasolina.
+                        </p>
+                    </div>
+                </div>
+            </div>           
+            
+        </header>        
+{% endblock content %}

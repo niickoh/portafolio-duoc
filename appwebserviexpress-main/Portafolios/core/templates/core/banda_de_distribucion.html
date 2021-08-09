@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <title>Banda Distribución</title>
+{% endblock head %}
+{% block content %}
+        <header class="masthead">
+                <link href="{% static 'css/servicios.css' %}" rel="stylesheet"/>
+                <link href="{% static 'css/descripcion.css' %}" rel="stylesheet" />
+                <link href="{% static 'css/afinacion.css' %}" rel="stylesheet" />
+        <br><br>
+            <div class="container descripcion mt-5 pt-5">
+                <div class="row">
+                    <h2 class="text-white mb-4">Banda Distribución</h2>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <img class="iclass" src="{% static '/assets/img/bandadistribucion.JPG' %}"/>
+                    </div>
+                    <div class="col-8">
+                        <p class="text-white-80">
+                            La correa de distribución es el elemento de un motor de combustión interna que sincroniza la rotación del cigüeñal y del árbol de levas.
+                            Su objetivo es permitir el cierre y apertura de válvulas del motor en el momento adecuado durante el proceso de admisión y escape de cada cilindro.
+                    </div>
+                </div>
+            </div> 
+            <div class="container descripcion mt-5">
+                <div class="row">
+                    <h2 class="text-white mb-4">¿Cómo saber si la correa de distribución está mal?</h2>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <img class="iclass" src="{% static '/assets/img/bandadistribucion2.jpg' %}"/>
+                    </div>
+                    <div class="col-8">
+                        <p class="text-white-80">
+                               Un ruido que viene del motor. Cuando la correa de distribución se desgasta, se puede generar un ruidito en el motor, una especie de 'tic-tac'.
+                               El motor no arranca.
+                               Fallos en la mecánica. 
+                               Fugas de aceite en el frontal de la mecánica.
+                        </p>
+                    </div>
+                </div>
+            </div>     
+        </header>
+{% endblock content %}

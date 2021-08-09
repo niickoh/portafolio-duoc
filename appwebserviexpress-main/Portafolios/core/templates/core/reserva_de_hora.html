@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <title>Reserva de Hora</title>
+{% endblock head %}
+{% block content %}
+<header class="container">
+        	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+	        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+               
+                        <div class="limiter">
+                            <div class="container-login100">
+                                <div class="wrap-login100">
+                                    <div class="logingreen-form-title" style="background-image: url(images/bg-01.jpg);">
+                                        <span class="logingreen-form-title-1">
+                                            Reserva de Hora
+                                        </span>
+                                    </div>
+                                    <div class="container mt-4">
+                                        <form role="form" method="POST">
+                                            {% csrf_token %}
+                                            <div class="controls">
+                                                <div class="row">
+                                                    <div class="col-md-5">
+                                                        <div class="form-group">{{form.fecha_solicitud.label}} {{form.fecha_solicitud}} {{form.fecha_solicitud.errors}}</div>
+                                                    </div>
+                                                    <div class="col-md-3 p-l-50">
+                                                        <div class="form-group">{{form.hora.label}} {{form.hora}} {{form.hora.errors}}</div>
+                                                    </div>
+                                                                                                                                                
+                                                    <div class="col-md-8">
+                                                        <div class="form-group">Servicio {{form.tiposervicio}} {{form.tiposervicio.errors}}</div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">Mecanico {{form.usuarioescritorio}} {{form.usuarioescritorio.errors}}</div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">{{form.asunto.label}} {{form.asunto}} {{form.asunto.errors}}</div>
+                                                    </div>
+                                                </div> 
+                                                                                          
+                                                <br>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="container-login100-form-btn mt-3">
+                                                    <button class="login100-form-btn" type="submit">
+                                                        Reservar 
+                                                    </button>
+                                                </div> 
+                                                <br>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- /.8 -->
+                    </div> <!-- /.row-->
+                </div>
+            </div>
+        </header>
+        <script>
+            $(function () {
+            $("#id_fecha_solicitud").datepicker({
+                format:'dd/mm/yyyy',
+            });
+            });
+        </script>
+        <script>
+            $(function () {
+            $('#id_hora').timepicker({
+                timeFormat: 'HH:mm',
+                interval: 15,
+                minTime: '9:00am',
+                maxTime: '8:45pm',
+                defaultTime: '9:00am',
+                startTime: '10:00',
+                dynamic: true,
+                dropdown: true,
+                scrollbar: true
+            });
+            });
+        </script>
+
+{% endblock content %}

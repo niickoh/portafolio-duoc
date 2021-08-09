@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <title>Batería</title>
+{% endblock head %}
+{% block content %}
+
+    <header class="masthead">
+            <link href="{% static 'css/servicios.css' %}" rel="stylesheet"/>
+            <link href="{% static 'css/descripcion.css' %}" rel="stylesheet" />
+            <link href="{% static 'css/afinacion.css' %}" rel="stylesheet" />
+    <br><br>
+        <div class="container descripcion mt-5 pt-5">
+            <div class="row">
+                <h2 class="text-white mb-4">Bateria</h2>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img class="iclass" src="{% static '/assets/img/bateria.jpg' %}"/>
+                </div>
+                <div class="col-8">
+                    <p class="text-white-80">
+                                    Entrega energía para el ARRANQUE del motor. Suministra energía para el funcionamiento de accesorios eléctricos, cuando el motor no está encendido. 
+                                    Actúa como estabilizador del voltaje del circuito eléctrico del vehículo.
+                    </p>
+                </div>
+            </div>
+        </div> 
+        <div class="container descripcion mt-5">
+            <div class="row">
+                <h2 class="text-white mb-4">¿Cuanto tiempo dura la bateria de un auto?</h2>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img class="iclass" src="{% static '/assets/img/bateria2.jpg' %}"/>
+                </div>
+                <div class="col-8">
+                    <p class="text-white-80">
+                                La vida útil de una batería no se puede medir con precisión, puesto que depende de la calidad de esta y de variables como el uso que se le dé y el estado general del auto. Si te estás preguntando cuánto dura la batería de un auto, 
+                                debes saber que en condiciones normales puede llegar a durar alrededor de 3 años.
+                    </p>
+                </div>
+            </div>
+        </div>    
+    </header> 
+{% endblock content %}

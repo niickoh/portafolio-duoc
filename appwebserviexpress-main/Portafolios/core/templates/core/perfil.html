@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head %}
+<title>
+    Perfil
+</title>
+{% endblock head %}
+
+{% block content %}
+
+        
+        <header class="masthead">        
+        	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+	        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+            <link href="{% static 'css/estilo_slide.css' %}" rel="stylesheet" />
+               
+                        <div class="limiter">
+                            <div class="container-login100">
+                                <div class="wrap-login100">
+                                    <div class="logingreen-form-title" style="background-image: url(images/bg-01.jpg);">
+                                        <span class="logingreen-form-title-1">
+                                            Perfil de {{user.first_name}} {{user.last_name}}
+                                        </span>
+                                    </div>
+                                    <div class="container mt-4"> 
+                                        <div class="row"> 
+                                            <div class="col-md-7">
+                                                <div class="form-group"><p class="text-left">Ultima Conexión</p><input type="text" style="text-transform:uppercase;" class="formulario_izquierda" value="{{ user.last_login }}" readonly></div>
+                                            </div>   
+                                            <div class="col-md-4">
+                                                <div class="form-group"><p class="text-left">Opciones</p><a href="{% url 'usuarios:modificar_perfil' user.id%}"> <img class="navbar-brand js-scroll-trigger"  width="40" src="{% static '/assets/img/edit_user.png' %}" alt="Modificar"></a></div>
+                                            </div>                                    
+                                        </div>
+                                        <div class="row"> 
+                                            <div class="col-md-6">
+                                                <div class="form-group"><p class="text-left">Nombre</p><input type="text" style="text-transform:uppercase;" class="formulario_izquierda" value="{{ user.first_name }}" readonly></div>
+                                            </div>
+                                            
+                                            <div class="col-md-6">
+                                                <div class="form-group"><p class="text-left">Apellido</p><input type="text" style="text-transform:uppercase;" class="formulario_izquierda" value="{{ user.last_name}}" readonly></div>
+                                            </div>
+                                        </div> 
+                                        <div class="row"> 
+                                            <div class="col-md-6">
+                                                <div class="form-group"><p class="text-left">Usuario</p><input type="text" style="text-transform:uppercase;" class="formulario_izquierda" value="{{ user.username}}" readonly></div>
+                                            </div>
+                                            
+                                            <div class="col-md-6">
+                                                <div class="form-group"><p class="text-left">Email</p><input type="text" style="text-transform:uppercase;" class="formulario_izquierda" value="{{ user.email}}" readonly></div>
+                                            </div>
+                                        </div> 
+                                        <div class="row"> 
+                                            <div class="col-md-6">
+                                                <div class="form-group"><p class="text-left">Fecha de Nacimiento</p><input type="text" style="text-transform:uppercase;" class="formulario_izquierda" value="{{ user.fecha_nacimiento}}" readonly></div>
+                                            </div>
+                                            
+                                            <div class="col-md-6">
+                                                <div class="form-group"><p class="text-left">Contraseña</p><input type="password" style="text-transform:uppercase;" class="formulario_izquierda" value="{{ user.password}}" readonly></div>
+                                            </div>
+                                        </div> 
+                                        <br>
+                                        <div class="p-l-240">                                            
+                                                <a href="{% url 'core:listar_reserva'%}">
+                                                    Mi historial de Reserva
+                                                </a>
+                                        </div>
+                                        <div class="p-l-240 mt-4">                                            
+                                                <a class="p-l-60" href="{% url 'core:index'%}">
+                                                    Inicio
+                                                </a>
+                                        </div>
+                                        
+                                    </div>
+                                    <br>
+                            </div>                            
+                        </div> 
+                    
+                
+                
+            
+            
+        </header>
+        
+
+{% endblock %}

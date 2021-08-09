@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>
+    Inicio de Sesion
+</title>
+{% endblock head %}
+{% load static %}
+{% block content %}      
+
+
+        <header class="container">
+        	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+	        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+               
+                        <div class="limiter">
+                            <div class="container-login100">
+                                <div class="wrap-login100">
+                                    <div class="login100-form-title" style="background-image: url(images/bg-01.jpg);">
+                                        <span class="login100-form-title-1">
+                                            Iniciar Sesión
+                                        </span>
+                                    </div>
+            
+                                    <form role="form" method="POST">
+                                        {% csrf_token %}
+                                        <div class="controls">
+                                        <br>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group text-center">Usuario o Correo Electronico </div>
+                                                </div>
+                                                <div class="wrap-input100 input100">{{login_form.username}}</div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group text-center">{{login_form.password.label}}</div>
+                                                </div>           
+                                                <div class="wrap-input100 input100">{{login_form.password}}</div>                                
+                                            </div>
+                                                        {% if login_form.errors %}
+                                                <div class="col-md-12 d-flex justify-content-center alert alert-danger" role="alert"> Usuario o Contraseña incorrectos. </div>
+                                                        {% endif %}                                                
+                                            </div>
+                                            <br>
+                                            <div class="flex-sb-m w-full p-b-30">
+                                            <div class="contact100-form-checkbox p-l-40" >
+                                                <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                                                
+                                            </div>
+
+                                            
+                                        </div>
+                                        <br>
+                                        <div class="container-login100-form-btn">
+                                            <button class="login100-form-btn" type="submit">
+                                                Ingresar
+                                            </button>
+                                        </div>
+                                        <br>
+                                        <div class="p-l-160">
+                                            ¿No tienes cuenta?, Regístrate
+                                                <a href="{% url 'usuarios:registro'%}">
+                                                    ¡Aquí!
+                                                </a>
+                                        </div>
+                                        <br>
+                                        
+
+                                        
+                                        
+                                    </form>                                
+                                </div>
+                            </div>
+                        </div> <!-- /.8 -->
+
+           
+            
+        </header>
+
+
+{% endblock %}

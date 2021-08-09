@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<title>Inicio</title>
+{% endblock head %}
+{% block content %}
+        <head>
+            <link href="{% static 'css/estilo_slide.css' %}" rel="stylesheet" />
+            <div id="sl" class="slider">
+                <ul>
+                    <li><img src="{% static '/assets/img/taller1.jpg' %}" alt=""/></li>
+
+                    <li><img src="static/assets/img/taller2.jpg" alt=""/></li>
+
+                    <li><img src="static/assets/img/taller3.jpg" alt=""/></li> 
+
+                    <li><img src="static/assets/img/carr2.jpg" alt=""/></li>             
+                </ul>    
+            </div>
+            
+        </head>
+        <!-- Projects-->
+        
+        <!-- About-->
+        <section class="mastsection about-section text-center" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h2 class="text-white mb-4">¿Quienes Somos?</h2>
+                        <p class="text-white-80">
+                        Aquí no hay estafas. Solo hay trabajo e ingeniería de calidad para tu vehiculo.
+                        Aquí en Servi Express ponemos a tu vehiculo de pie por un precio razonable. No vamos a llevar a cabo
+                         trabajos importantes sin hablar contigo primero. Es más, nuestro servicio rápido significa que tu vehiculo y
+                          la carretera estarán unidos de nuevo en poco tiempo. Para saber más, o para reservar una consulta en Santiago o 
+                          póngase en contacto con nosotros en el formulario
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Signup-->
+    {% if user.is_authenticated %}
+        
+    {% else %}       
+        <section class="signup-section" id="signup">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-lg-8 mx-auto text-center">
+                        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+                        <h2 class="text-white mb-2">Registrate Aquí</h2>
+                        <p class="text-white">o inicia sesión</p>
+                        <div class="inline d-flex">
+                            <button class="btn btn-primary mx-auto" type="button" onclick="location.href='{% url 'usuarios:registro' %}'">Registrarse</button>
+                                                        <button class="btn btn-primary mx-auto" type="button" onclick="location.href='{% url 'usuarios:inicio_sesion' %}'">Inicia Sesion</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    {% endif %}
+
+
+    
+{% endblock content %}

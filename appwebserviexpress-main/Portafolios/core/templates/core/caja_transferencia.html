@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <title>Caja Transferencia</title>
+{% endblock head %}
+{% block content %}
+
+    <header class="masthead">
+            <link href="{% static 'css/servicios.css' %}" rel="stylesheet"/>
+            <link href="{% static 'css/descripcion.css' %}" rel="stylesheet" />
+            <link href="{% static 'css/afinacion.css' %}" rel="stylesheet" />
+    <br><br>
+        <div class="container descripcion mt-5 pt-5">
+            <div class="row">
+                <h2 class="text-white mb-4">Caja Transferencia</h2>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img class="iclass" src="{% static '/assets/img/cajadetransferencia.jpg' %}"/>
+                </div>
+                <div class="col-8">
+                    <p class="text-white-80">
+                                    La caja de transferencia o transfer es el sistema mecánico y actualmente en muchos casos mecánico-hidráulico, que se encarga de transferir y repartir la potencia que llega desde el cambio al eje de las ruedas, en los vehículos de tracción trasera, 4×4 o todoterreno tanto AWD(all wheel drive) como 4WD(four wheel drive).
+                    </p>
+                </div>
+            </div>
+        </div> 
+        <div class="container descripcion mt-5">
+            <div class="row">
+                <h2 class="text-white mb-4">¿Qué pasa cuando se daña la caja de transferencia?</h2>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img class="iclass" src="{% static '/assets/img/transfer2.jpg' %}"/>
+                </div>
+                <div class="col-8">
+                    <p class="text-white-80">
+                                Los síntomas asociados a fallas de caja de transfer y/o diferencial son: ruido, zumbido, traqueteo debajo del chasis y hasta que deje de avanzar el auto en casos extremos.
+                    </p>
+                </div>
+            </div>
+        </div>     
+    </header>
+{% endblock content %}
+{%load static%}

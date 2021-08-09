@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <title>Lista de Reserva de Hora</title>
+{% endblock head %}
+{% block content %}
+
+      
+        <link href="{% static 'css/estilo_slide.css' %}" rel="stylesheet" />
+        <br>   <br>    
+            <header class="container">
+        	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+	        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+               
+                        <div class="limiter">
+                            <div class="container-listar ">
+                                <div class="wrap-listar">
+                                    <div class="logingreen-form-title" style="background-image: url(images/bg-01.jpg);">
+                                        <span class="logingreen-form-title-1">
+                                            Mi Historial de Reservas
+                                        </span>
+                                    </div>           
+                
+                <div class="row">
+                    <div class=" ml-auto mx-auto">
+                        <div class="card mt-2 mx-auto p-4 bg-light">
+                            <div class="card-body bg-light">
+                                <div class="container">
+                                    <div class="row"> 
+                                        <div class="col-md-12 p-l-1 p-r-250">
+                                            <div class="p-r-230"><div class="form-group p-r-250"><a class="p-r-250" href="{% url 'core:perfil' %}">Volver</a></div></div>
+                                    </div>
+                                    <table>
+                                        <tr>
+                                            <thead><th>ID Reserva Hora</th>  
+                                            <th>Usuario</th>
+                                            <th>Fecha Solicitud</th>
+                                            <th>Asunto</th>
+                                            <th>Tipo de Servicio</th>
+                                            <th>Mecánico</th>
+                                            <th></th>
+                                            <th>Opciones</th>
+                                            <th></th>
+                                            </thead> 
+                                            
+                                        </tr>
+                                        
+                                        
+                                        
+                                        
+                                        {% for r in reserva%}
+                                        
+
+                                        <tr>
+                                            <td style="text-transform:uppercase;">{{ r.id | title }}</td>
+                                            <td style="text-transform:uppercase;">{{ user.username | title }}</td>
+                                            <td style="text-transform:uppercase;">{{ r.fecha_solicitud | title }}</td>
+                                            <td style="text-transform:uppercase;">{{ r.asunto }}</td>
+                                            <td style="text-transform:uppercase;">{{ r.tiposervicio }}</td>
+                                            <td style="text-transform:uppercase;">{{ r.usuarioescritorio.primer_nombre}}&nbsp;{{r.usuarioescritorio.apellido_paterno}}</td>   
+                                            <td>
+                                            <a href="{% url 'core:modificar' r.id %}"> <img class="navbar-brand js-scroll-trigger" width="40" src="{% static '/assets/img/edit.png' %}"></a>
+                                            </td> 
+                                            <td>
+                                            <a href="{% url 'core:eliminar' r.id %}"> <img class="navbar-brand js-scroll-trigger" width="40" src="{% static '/assets/img/delete.png' %}"></a>
+                                            </td>    
+                                            
+                                            <td>
+                                            <a href="{% url 'core:boleta'  r.id %}"> <img class="navbar-brand js-scroll-trigger" width="40" src="{% static '/assets/img/boleta.png' %}"></a>
+                                            </td>     
+                                                         
+                                        </tr>
+                                        
+                                        {% endfor %}
+                                        
+                                    </table>
+                                
+                                
+                                </div>
+                                
+                            </div>
+                            
+                        </div> <!-- /.8 -->
+                    </div>
+                    <br> <!-- /.row-->
+                </div>
+            </div>
+            </div>
+        </header>
+        
+
+
+
+{% endblock content %}

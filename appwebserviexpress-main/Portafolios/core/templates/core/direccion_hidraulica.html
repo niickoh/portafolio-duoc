@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <title>Dirección Hidráulica</title>
+{% endblock head %}
+{% block content %}
+
+    <header class="masthead">
+            <link href="{% static 'css/servicios.css' %}" rel="stylesheet"/>
+            <link href="{% static 'css/descripcion.css' %}" rel="stylesheet" />
+            <link href="{% static 'css/afinacion.css' %}" rel="stylesheet" />
+    <br><br>
+        <div class="container descripcion mt-5 pt-5">
+            <div class="row">
+                <h2 class="text-white mb-4">Dirección Hidráulica</h2>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img class="iclass" src="{% static '/assets/img/DIRECCIONHIDRAULICA.jpg' %}"/>
+                </div>
+                <div class="col-8">
+                    <p class="text-white-80">
+                                    La dirección hidráulica es uno de los desarrollos tecnológicos más importantes del sector automotor, principalmente porque permite al conductor dirigir las ruedas del vehículo con mayor ligereza,
+                                    le facilita reaccionar frente a imprevistos y ejecutar maniobras a bajas velocidades.
+                    </p>
+                </div>
+            </div>
+        </div> 
+        <div class="container descripcion mt-5">
+            <div class="row">
+                <h2 class="text-white mb-4">¿Cómo saber si la direccion hidraulica esta fallando?</h2>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img class="iclass" src="{% static '/assets/img/direccionhidraulica2.jpg' %}"/>
+                </div>
+                <div class="col-8">
+                    <p class="text-white-80">
+                                Ruidos al dar vuelta al volante. Si al momento de una vuelta se escucha un rechinido, puede significar que la bomba de dirección hidráulica tenga poco aceite.
+                                Fugas del líquido de transmisión.
+                                Volante rígido.
+                    </p>
+                </div>
+            </div>
+        </div>    
+    </header> 
+{% endblock content %}

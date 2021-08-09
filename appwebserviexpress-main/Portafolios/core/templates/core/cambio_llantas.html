@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <title>Cambio de Llantas</title>
+{% endblock head %}
+{% block content %}
+
+    <header class="masthead">
+            <link href="{% static 'css/servicios.css' %}" rel="stylesheet"/>
+            <link href="{% static 'css/descripcion.css' %}" rel="stylesheet" />
+            <link href="{% static 'css/afinacion.css' %}" rel="stylesheet" />
+    <br><br>
+        <div class="container descripcion mt-5 pt-5">
+            <div class="row">
+                <h2 class="text-white mb-4">Cambio llantas</h2>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img class="iclass" src="{% static '/assets/img/LLANTAS.png' %}"/>
+                </div>
+                <div class="col-8">
+                    <p class="text-white-80">
+                                    Las llantas están diseñados para soportar el peso del vehículo, absorber los impactos de la carretera, trasmitir la tracción, 
+                                    las fuerzas de par y de frenado a la superficie de la carretera y mantener y cambiar la dirección de la marcha.
+                    </p>
+                </div>
+            </div>
+        </div> 
+        <div class="container descripcion mt-5">
+            <div class="row">
+                <h2 class="text-white mb-4">¿Cómo saber si las llantas son buenas?</h2>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img class="iclass" src="{% static '/assets/img/llantas2.jpg' %}"/>
+                </div>
+                <div class="col-8">
+                    <p class="text-white-80">
+                                Entre mayor sea el índice de carga de la llanta, mayor será su capacidad de carga. Una llanta con un índice de carga mayor que la llanta de equipo original indica un aumento en la capacidad de carga. 
+                                Una llanta con un índice de carga igual a la llanta de equipo original indica una capacidad de carga equivalente.
+                    </p>
+                </div>
+            </div>
+        </div>     
+    </header>
+{% endblock content %}

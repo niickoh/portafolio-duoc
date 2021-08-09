@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <title>Modificar Datos Perfil</title>
+{% endblock head %}
+{% block content %}
+
+
+        <header class="masthead">       
+        <br> 
+        	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+	        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+            <link href="{% static 'css/estilo_slide.css' %}" rel="stylesheet" />
+                
+                        <div class="limiter">                        
+                            <div class="container-login100">
+                                <div class="wrap-login100">                                                                        
+                                    <div class="logingreen-form-title">                                            
+                                        <span class="logingreen-form-title-1">
+                                            Modificar datos
+                                        </span>                                        
+                                    </div>
+                                    <div class="container mt-3"> 
+                                            <div class="alert alert-warning" role="alert">
+                                                Para modificar sus datos sin cambiar su contraseña, por favor ingrese su contraseña actual en el campo de contraseña,
+                                                de lo contrario puede cambiar su contraseña junto con sus datos.
+                                            </div>
+                                        <div class="card-body bg-light">
+                                            <div class="container"> 
+                                                <form role="form" method="POST">
+                                                    {% csrf_token %}
+                                                    <div class="controls">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">{{form.username.label}}  {{form.username}} {{form.username.errors}}</div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">{{form.email.label}}  {{form.email}} {{registration_form.email.errors}}</div>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">{{form.fecha_nacimiento.label}}  {{form.fecha_nacimiento}} {{form.fecha_nacimiento.errors}}</div>
+                                                            </div>                                           
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">{{form.first_name.label}} {{form.first_name}} {{form.first_name.errors}}</div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">{{form.last_name.label}} {{form.last_name}} {{form.last_name.errors}}</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">{{form.password1.label}} {{form.password1}} {{form.password1.errors}}</div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="form-group">{{form.password2.label}} {{form.password2}}</div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">{{form.password2.errors}}</div>
+                                                            </div>
+                                                        </div>
+                                                            <div class="container-login100-form-btn">
+                                                                <button class="login100-form-btn" type="submit">
+                                                                    Guardar
+                                                                </button>
+                                                            </div>      
+
+                                                            <dvi class="p-l-19 mt-2"><a href="{% url 'core:perfil' %}" class="p-l-250">Volver</a>      </div>                                                  
+                                                        
+                                                        
+                                                    </div>
+                                                </form> 
+                                            </div>    
+                                        </div>
+                                    </div>    
+                                </div>                                
+                            </div> 
+                        </div> 
+                    
+                    <br><br><br><br><br>
+        </header>
+        <script>
+            $(function () {
+            $("#id_fecha_nacimiento").datepicker({
+                format:'dd/mm/yyyy',
+            });
+            });
+        </script>
+
+{% endblock %}

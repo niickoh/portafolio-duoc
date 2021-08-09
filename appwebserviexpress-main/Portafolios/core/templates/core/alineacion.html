@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <title>Alineación</title>
+{% endblock head %}
+{% block content %}
+        <header class="masthead">
+                <link href="{% static 'css/servicios.css' %}" rel="stylesheet"/>
+                <link href="{% static 'css/descripcion.css' %}" rel="stylesheet" />
+                <link href="{% static 'css/afinacion.css' %}" rel="stylesheet" />
+        <br><br>
+            <div class="container descripcion mt-5 pt-5">
+                <div class="row">
+                    <h2 class="text-white mb-4">Alineacion</h2>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <img class="iclass" src="{% static '/assets/img/ALINEACION.JPG' %}"/>
+                    </div>
+                    <div class="col-8">
+                        <p class="text-white-80">
+                                        La alineación de las ruedas, que a veces se le llama trazado, consiste en ajustar los ángulos de las ruedas, de tal manera que queden conforme lo especifica el fabricante de tu vehículo. Por otro lado,
+                                        el balanceo de las ruedas permite que estas últimas giren sin causar vibraciones innecesarias.
+                    </div>
+                </div>
+            </div> 
+            <div class="container descripcion mt-5">
+                <div class="row">
+                    <h2 class="text-white mb-4">¿Cómo se hace la alineacion de un auto?</h2>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <img class="iclass" src="{% static '/assets/img/alineacion2.jpg' %}"/>
+                    </div>
+                    <div class="col-8">
+                        <p class="text-white-80">
+                                    Para llevar a cabo la alienación se deben ajustar los neumáticos y las llantas para que ambos trabajen de forma paralela. Los parámetros que hay que regular se denominan ángulos y son los siguientes: Ángulo de inclinación de las ruedas: Con respecto a la vertical, 
+                                    contemplando el vehículo en su longitud.
+                        </p>
+                    </div>
+                </div>
+            </div>     
+        </header>
+{% endblock content %}

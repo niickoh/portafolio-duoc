@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <title>Luces</title>
+{% endblock head %}
+{% block content %}
+
+    <header class="masthead">
+            <link href="{% static 'css/servicios.css' %}" rel="stylesheet"/>
+            <link href="{% static 'css/descripcion.css' %}" rel="stylesheet" />
+            <link href="{% static 'css/afinacion.css' %}" rel="stylesheet" />
+    <br><br>
+        <div class="container descripcion mt-5 pt-5">
+            <div class="row">
+                <h2 class="text-white mb-4">Luces</h2>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img class="iclass" src="{% static '/assets/img/luces.jpg' %}"/>
+                </div>
+                <div class="col-8">
+                    <p class="text-white-80">
+                                    Es importante saber que las luces sirven para ver y para ser visto: no solo alumbran el lugar donde nos movemos sino que son un elemento clave para avisar a los demás que estamos ahí.
+                                    Es más: en un auto, los diferentes tipos de luces tienen una función de “comunicación” que todos los que manejan comparten.
+                    </p>
+                </div>
+            </div>
+        </div> 
+        <div class="container descripcion mt-5">
+            <div class="row">
+                <h2 class="text-white mb-4">¿Cómo se llaman las luces delanteras de un coche?</h2>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img class="iclass" src="{% static '/assets/img/luces2.jpg' %}"/>
+                </div>
+                <div class="col-8">
+                    <p class="text-white-80">
+                                Luces bajas: también conocidas como de ciudad, se emanan desde dos focos ubicados en la parte delantera del vehículo.
+                                Su luz debe ser blanca o amarilla (¡nunca azul o de otro color!), y con un alcance de al menos 50 metros para que se visibilicen los obstáculos del camino.
+                    </p>
+                </div>
+            </div>
+        </div>    
+    </header> 
+{% endblock content %}

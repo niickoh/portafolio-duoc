@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <title>Servicios</title>
+{% endblock head %}
+{% block content %}
+        <header class="masthead">
+                <link href="{% static 'css/servicios.css' %}" rel="stylesheet"/>
+                <link href="{% static 'css/descripcion.css' %}" rel="stylesheet" />
+                <link href="{% static 'css/afinacion.css' %}" rel="stylesheet" />
+        <br>       <br>
+        
+            <div class='container servicios mt-5 pt-5'>
+            <div class="container text-white">
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="fs-80 text-center ml-5 pl-5 ">&nbsp;&nbsp;&nbsp;Nuestros Servicios</span>
+            </div>               
+                <div class="row pt-5">
+                    <div class="item col-lg-3 col-md-4 col-6">
+                        <div class="item_service">
+                            <img class="iclass" src="{% static '/assets/img/afinacion.jpg' %}"/>
+                            <div class="item-text">
+                                <a href="{% url 'core:afinacion' %}"><h5>afinacion</h5></a>
+                                <p>$25.000 </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item col-lg-3 col-md-4 col-6">
+                        <div class="item_service">
+                            <img class="iclass1" alt='frenos'  src="{% static '/assets/img/frenos.jpg' %}"/>
+                            <div class="item-text">
+                                <a href="{% url 'core:frenos' %}"><h5>frenos</h5></a>
+                                <p>$93.990 </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item col-lg-3 col-md-4 col-6">
+                        <div class="item_service">
+                            <img class="iclass2" alt='aire acondicionado' src="{% static '/assets/img/AireAcondicionado_big.png' %}"/>
+                            <div class="item-text">
+                            <a href="{% url 'core:aire_acondicionado' %}"><h5>aire acondicionado</h5></a>
+                                <p>$59.990 </p>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="item col-lg-3 col-md-4 col-6">
+                        <div class="item_service">
+                            <img class="iclass1" alt='Alineacion'  src="{% static '/assets/img/ALINEACION.JPG' %}"/>
+                            <div class="item-text">
+                            <a href="{% url 'core:alineacion' %}"><h5>Alineacion</h5></a>
+                                <p>$25.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item col-lg-3 col-md-4 col-6">
+                        <div class="item_service">
+                            <img class="iclass2" alt='Direccion hidraulica' src="{% static '/assets/img/DIRECCIONHIDRAULICA.jpg' %}"/>
+                            <div class="item-text">
+                            <a href="{% url 'core:direccion_hidraulica' %}"><h5>Direccion Hidraulica</h5></a>
+                                <p>$65.990 </p>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="item col-lg-3 col-md-4 col-6">
+                        <div class="item_service">
+                            <img class="iclass1" alt='llantas' src="{% static '/assets/img/LLANTAS.png' %}"/>
+                            <div class="item-text">
+                                <a href="{% url 'core:cambio_llantas' %}"><h5>cambio de llantas</h5></a>
+                                <p>$150.990 </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item col-lg-3 col-md-4 col-6">
+                        <div class="item_service">
+                            <img class="iclass2" alt='bateria.jpg' src="{% static '/assets/img/bateria.jpg' %}"/>
+                            <div class="item-text">
+                            <a href="{% url 'core:bateria' %}"><h5>Bateria</h5></a>
+                                <p>$34.990</p>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="item col-lg-3 col-md-4 col-6">
+                        <div class="item_service">
+                            <img class="iclass1" alt='cambio aceite' src="{% static '/assets/img/cambio-aceite.jpg' %}"/>
+                            <div class="item-text">
+                            <a href="{% url 'core:cambio_aceite' %}"><h5>cambio aceite</h5></a>
+                                <p>$30.000 </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item col-lg-3 col-md-4 col-6">
+                        <div class="item_service">
+                            <img class="iclass2" alt='banda de distribucion' src="{% static '/assets/img/bandadistribucion.jpg' %}"/>
+                            <div class="item-text">
+                            <a href="{% url 'core:banda_distribucion' %}"><h5>banda distribucion</h5></a>
+                                <p>$55.550 </p>
+                            </div>
+                        </div>
+                    </div>   
+                    <div class="item col-lg-3 col-md-4 col-6">
+                        <div class="item_service">
+                            <img class="iclass2" alt='luces' src="{% static '/assets/img/luces.jpg' %}"/>
+                            <div class="item-text">
+                            <a href="{% url 'core:luces' %}"><h5>luces</h5></a>
+                                <p>$30.000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item col-lg-3 col-md-4 col-6">
+                        <div class="item_service">
+                            <img class="iclass2" alt='bomba agua' src="{% static '/assets/img/bombaagua.jpg' %}"/>
+                            <div class="item-text">
+                            <a href="{% url 'core:bomba_agua' %}"><h5>bomba agua</h5></a>
+                                <p>$70.000 </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item col-lg-3 col-md-4 col-6">
+                        <div class="item_service">
+                            <img class="iclass2" alt='caja transferencia' src="{% static '/assets/img/cajadetransferencia.jpg' %}"/>
+                            <div class="item-text">
+                            <a href="{% url 'core:caja_transferencia' %}"><h5>caja transferencia </h5></a>
+                                <p>$200.000 </p>
+                            </div>
+                    </div>
+            
+
+    
+    
+    </div>
+            
+        </header>        
+{% endblock content %}
+

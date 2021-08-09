@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <title>Cambio de Aceite</title>
+{% endblock head %}
+{% block content %}
+
+    <header class="masthead">
+            <link href="{% static 'css/servicios.css' %}" rel="stylesheet"/>
+            <link href="{% static 'css/descripcion.css' %}" rel="stylesheet" />
+            <link href="{% static 'css/afinacion.css' %}" rel="stylesheet" />
+    <br><br>
+        <div class="container descripcion mt-5 pt-5">
+            <div class="row">
+                <h2 class="text-white mb-4">Cambio Aceite</h2>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img class="iclass" src="{% static '/assets/img/cambio-aceite.jpg' %}"/>
+                </div>
+                <div class="col-8">
+                    <p class="text-white-80">
+                                    Cambiar el aceite es una de las cosas más importantes que debes hacer para mantener en buen estado tu coche.
+                                    Renovar el aceite regularmente ayudará a que el motor funcione suavemente y pueda tener una vida útil más larga al mismo tiempo que se mejora su rendimiento.
+                    </p>
+                </div>
+            </div>
+        </div> 
+        <div class="container descripcion mt-5">
+            <div class="row">
+                <h2 class="text-white mb-4">¿Cuándo se le cambia el aceite al auto?</h2>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img class="iclass" src="{% static '/assets/img/direccionhidraulica2.jpg' %}"/>
+                </div>
+                <div class="col-8">
+                    <p class="text-white-80">
+                                En el caso de los autos ligeros, el intervalo de cambio de aceite para los motores de 4 tiempos puede oscilar entre 5.000 y 15.000 km, dependiendo de las condiciones de uso. 
+                                La creencia popular estableció en su día que se debe cambiar el aceite del motor aproximadamente cada 5.000 km.
+                    </p>
+                </div>
+            </div>
+        </div>   
+    </header>  
+{% endblock content %}

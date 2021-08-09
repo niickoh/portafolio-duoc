@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <title>Frenos</title>
+{% endblock head %}
+{% block content %}
+
+        <header class="masthead">
+                <link href="{% static 'css/servicios.css' %}" rel="stylesheet"/>
+                <link href="{% static 'css/descripcion.css' %}" rel="stylesheet" />
+                <link href="{% static 'css/afinacion.css' %}" rel="stylesheet" />
+        <br><br>
+            <div class="container descripcion mt-5 pt-5">
+                <div class="row">
+                    <h3 class="text-white mb-4">Frenos</h3>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <img class="iclass" src="{% static '/assets/img/frenos.jpg' %}"/>
+                    </div>
+                    <div class="col-8">
+                        <p class="text-white-80">
+                                        La razón por la que se deben cambiar unas pastillas de freno es sencilla: SEGURIDAD.
+                                    Unas pastillas desgastadas provocan, obviamente, una mayor distancia de frenado. Reduciendo 
+                            así nuestra seguridad y eficacia de frenado. Por eso es importante tener un buen mantenimiento de este componente.
+                        </p>
+                    </div>
+                </div>
+            </div> 
+            <div class="container descripcion mt-5">
+                <div class="row">
+                    <h2 class="text-white mb-4">¿Cúal es la finalidad de los frenos de un auto?</h2>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <img class="iclass" src="{% static '/assets/img/frenomano.jpg' %}"/>
+                    </div>
+                    <div class="col-8">
+                        <p class="text-white-80">
+                                    La finalidad de cualquier sistema de frenado consiste en transformar la energía del movimiento en energía térmica con el finde obtener una deceleración o bloquear el vehículo cuando se está estacionado. Además, 
+                                    los componentes que conforman los frenos deben de poder detener el vehículo pudiendo disipar el calor generado con una elevada eficacia.
+                        </p>
+                    </div>
+                </div>
+            </div>     
+        </header>
+{% endblock content %}

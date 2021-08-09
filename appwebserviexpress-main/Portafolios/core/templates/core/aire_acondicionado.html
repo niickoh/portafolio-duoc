@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <title>Aire Acondicionado</title>
+{% endblock head %}
+{% block content %}
+
+    <header class="masthead">
+            <link href="{% static 'css/servicios.css' %}" rel="stylesheet"/>
+            <link href="{% static 'css/descripcion.css' %}" rel="stylesheet" />
+            <link href="{% static 'css/afinacion.css' %}" rel="stylesheet" />
+    <br><br>
+        <div class="container descripcion mt-5 pt-5">
+            <div class="row">
+                <h2 class="text-white mb-4">Aire acondicionado</h2>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img class="iclass" src="{% static '/assets/img/AireAcondicionado_big.png' %}"/>
+                </div>
+                <div class="col-8">
+                    <p class="text-white-80">
+                                    El Aire Acondicionado de un auto funciona igual que el refrigerador, donde un gas es comprimido por un compresor, para luego dejarlo descomprimir. Al volverse nuevamente gas, absorbe temperatura de la zona lográndose valores menores al 0° C,
+                                    que llegan al interior del auto a través de un ventilador.
+                    </p>
+                </div>
+            </div>
+        </div> 
+        <div class="container descripcion mt-5">
+            <div class="row">
+                <h2 class="text-white mb-4">Cosejos para el uso correcto del aire acondicionado</h2>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img class="iclass" src="{% static '/assets/img/aireacondicionado2.jpg' %}"/>
+                </div>
+                <div class="col-8">
+                    <p class="text-white-80">
+                                Ventilar el habitáculo antes de prenderlo.
+                                No bajar las ventanillas durante su utilización.
+                                Marcar una temperatura en torno a 21º y 23º.
+                                Salvo que la temperatura exterior sea muy elevada, no fijar el sistema más de cinco grados por debajo.
+                    </p>
+                </div>
+            </div>
+        </div>     
+    </header>
+{% endblock content %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <title>Bomba de Agua</title>
+{% endblock head %}
+{% block content %}
+
+    <header class="masthead">
+            <link href="{% static 'css/servicios.css' %}" rel="stylesheet"/>
+            <link href="{% static 'css/descripcion.css' %}" rel="stylesheet" />
+            <link href="{% static 'css/afinacion.css' %}" rel="stylesheet" />
+    <br><br>
+        <div class="container descripcion mt-5 pt-5">
+            <div class="row">
+                <h2 class="text-white mb-4">Bomba Agua</h2>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img class="iclass" src="{% static '/assets/img/bombaagua.jpg' %}"/>
+                </div>
+                <div class="col-8">
+                    <p class="text-white-80">
+                                    La bomba de agua se compone de múltiples empaquetaduras y sellos que mantienen el refrigerante contenido y aseguran que se entregue un flujo constante de este líquido desde el radiador al motor.
+                                    Eventualmente, estas juntas y sellos se desgastarán, secarán, agrietarán o romperán por completo.
+                    </p>
+                </div>
+            </div>
+        </div> 
+        <div class="container descripcion mt-5">
+            <div class="row">
+                <h2 class="text-white mb-4">¿Qué función tiene la bomba de agua de un auto?</h2>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img class="iclass" src="{% static '/assets/img/bombaagua2.jpg' %}"/>
+                </div>
+                <div class="col-8">
+                    <p class="text-white-80">
+                                La bomba de agua forma parte del sistema de refrigeración de un vehículo y es esencial, ya que es la encargada de hacer que el líquido refrigerante del motor circule por todo su interior, así como por los conductos de refrigeración del mismo.
+                    </p>
+                </div>
+            </div>
+        </div>    
+    </header> 
+{% endblock content %}
